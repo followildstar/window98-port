@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="desktop">
+
+    <!-- Desktop Icons -->
+    <div class="dicons">
+      <div class="dicon" ondblclick="ow('about')">
+        <div class="dicon-img">🧑</div>
+        <div class="dicon-lbl">About Me</div>
+      </div>
+      <div class="dicon" ondblclick="ow('projects')">
+        <div class="dicon-img">📁</div>
+        <div class="dicon-lbl">My Projects</div>
+      </div>
+      <div class="dicon" ondblclick="ow('drawing')">
+        <div class="dicon-img">🖼️</div>
+        <div class="dicon-lbl">Drawing</div>
+      </div>
+      <div class="dicon" ondblclick="ow('contact')">
+        <div class="dicon-img">✉️</div>
+        <div class="dicon-lbl">Contact</div>
+      </div>
+      <div class="dicon" ondblclick="sd('recycle')">
+        <div class="dicon-img">🗑️</div>
+        <div class="dicon-lbl">Recycle Bin</div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="win" id="w-about">
+      <div class="wtb" id="t-about">
+        <span class="wtb-ico">🧑</span><span class="wtb-txt">About Me — Properties</span>
+        <div class="wbtns">
+          <div class="wbtn nd">_</div>
+          <div class="wbtn nd">□</div>
+          <div class="wbtn" onclick="cw('about')">✕</div>
+        </div>
+      </div>
+      <div class="wmb"><span class="wmi">File</span><span class="wmi">Edit</span><span class="wmi">View</span><span
+          class="wmi">Help</span></div>
+      <div class="wbody">
+        <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:8px">
+          <div style="font-size:38px;line-height:1">🌿</div>
+          <div style="flex:1">
+            <div class="lbl">Full Name:</div>
+            <div class="field">Follow</div>
+            <div class="lbl">Occupation:</div>
+            <div class="field">Designer &amp; Illustrator</div>
+          </div>
+        </div>
+        <div class="lbl">Location:</div>
+        <div class="field">Seoul, South Korea</div>
+        <div class="hdiv"></div>
+        <div class="lbl">Description:</div>
+        <div class="inset" style="min-height:60px;line-height:1.65"><span id="ttext"></span><span class="cur"
+            id="tcur"></span></div>
+        <div class="hdiv"></div>
+        <div class="lbl">Skills:</div>
+        <div class="tags">
+          <div class="tag">Figma</div>
+          <div class="tag">HTML/CSS</div>
+          <div class="tag">Illustration</div>
+          <div class="tag">Typography</div>
+          <div class="tag">Branding</div>
+          <div class="tag">Publishing</div>
+        </div>
+        <div class="hdiv"></div>
+        <div style="display:flex;justify-content:flex-end;gap:5px">
+          <button class="btn" onclick="cw('about')">OK</button>
+          <button class="btn" style="cursor:default">Apply</button>
+        </div>
+      </div>
+      <div class="wstat">
+        <div class="wsp">1 item selected</div>
+        <div class="wsp" style="max-width:70px">2025</div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="win" id="w-projects" style="width:420px;top:30px;left:200px">
+      <div class="wtb" id="t-projects">
+        <span class="wtb-ico">📁</span><span class="wtb-txt">My Projects</span>
+        <div class="wbtns">
+          <div class="wbtn nd">_</div>
+          <div class="wbtn nd">□</div>
+          <div class="wbtn" onclick="cw('projects')">✕</div>
+        </div>
+      </div>
+      <div class="wmb"><span class="wmi">File</span><span class="wmi">Edit</span><span class="wmi">View</span><span
+          class="wmi">Go</span><span class="wmi">Help</span></div>
+      <div class="wtool-bar">
+        <div class="wtool">◀</div>
+        <div class="wtool">▶</div>
+        <div class="wtool">⬆</div>
+        <div class="wtsep"></div>
+        <div class="wtool">☰</div>
+        <div class="wtool">⊞</div>
+      </div>
+      <div class="wbody" style="padding:2px">
+        <div class="li" onmouseenter="sp(event,0)" onmouseleave="hp(0)">
+          <span class="li-ico">📄</span><span class="li-num">01</span>
+          <div class="li-body">
+            <div class="li-title">Brand Identity — Studio Mono</div>
+            <div class="li-desc">Visual identity system. Minimal, editorial, built around negative space.</div><span
+              class="li-link">Open →</span>
+          </div>
+        </div>
+        <div class="li" onmouseenter="sp(event,1)" onmouseleave="hp(1)">
+          <span class="li-ico">📑</span><span class="li-num">02</span>
+          <div class="li-body">
+            <div class="li-title">Editorial Design — Vol. 1</div>
+            <div class="li-desc">Self-published zine exploring type and illustration across 32 pages.</div><span
+              class="li-link">Open →</span>
+          </div>
+        </div>
+        <div class="li" onmouseenter="sp(event,2)" onmouseleave="hp(2)">
+          <span class="li-ico">🖥️</span><span class="li-num">03</span>
+          <div class="li-body">
+            <div class="li-title">UI Design — App Interface</div>
+            <div class="li-desc">Calm, focused productivity app. Designed for clarity and comfort.</div><span
+              class="li-link">Open →</span>
+          </div>
+        </div>
+        <div class="li" onmouseenter="sp(event,3)" onmouseleave="hp(3)">
+          <span class="li-ico">🖼️</span><span class="li-num">04</span>
+          <div class="li-body">
+            <div class="li-title">Poster Series — Seasons</div>
+            <div class="li-desc">Four poster illustrations interpreting the seasons through abstract shapes.</div><span
+              class="li-link">Open →</span>
+          </div>
+        </div>
+      </div>
+      <div class="wstat">
+        <div class="wsp">4 object(s)</div>
+        <div class="wsp" style="max-width:100px">0 bytes selected</div>
+      </div>
+    </div>
+
+    <!-- DRAWING -->
+    <div class="win" id="w-drawing" style="width:375px;top:90px;left:390px">
+      <div class="wtb" id="t-drawing">
+        <span class="wtb-ico">🖼️</span><span class="wtb-txt">Drawing — Gallery</span>
+        <div class="wbtns">
+          <div class="wbtn nd">_</div>
+          <div class="wbtn nd">□</div>
+          <div class="wbtn" onclick="cw('drawing')">✕</div>
+        </div>
+      </div>
+      <div class="wmb"><span class="wmi">File</span><span class="wmi">View</span><span class="wmi">Slideshow</span><span
+          class="wmi">Help</span></div>
+      <div class="wbody">
+        <div style="font-size:10px;color:var(--muted);margin-bottom:6px">Click any image to open full view.</div>
+        <div class="gallery">
+          <div class="gitem" onclick="olb(0)">🌸<span>Spring Study</span></div>
+          <div class="gitem" onclick="olb(1)">🏔️<span>Mountain</span></div>
+          <div class="gitem" onclick="olb(2)">🌿<span>Botanica</span></div>
+          <div class="gitem" onclick="olb(3)">🌊<span>Ocean</span></div>
+          <div class="gitem" onclick="olb(4)">🦋<span>Flutter</span></div>
+          <div class="gitem" onclick="olb(5)">🌙<span>Nocturne</span></div>
+        </div>
+        <div class="hdiv"></div>
+        <div style="font-size:10px;color:var(--muted)">Loading previews... <span id="pct">0</span>%</div>
+        <div class="pgwrap">
+          <div class="pgbar" id="pbar"></div>
+        </div>
+      </div>
+      <div class="wstat">
+        <div class="wsp">6 object(s)</div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="win" id="w-contact" style="width:270px;top:110px;left:600px">
+      <div class="wtb" id="t-contact">
+        <span class="wtb-ico">✉️</span><span class="wtb-txt">Contact — Address Book</span>
+        <div class="wbtns">
+          <div class="wbtn nd">_</div>
+          <div class="wbtn nd">□</div>
+          <div class="wbtn" onclick="cw('contact')">✕</div>
+        </div>
+      </div>
+      <div class="wmb"><span class="wmi">File</span><span class="wmi">Edit</span><span class="wmi">View</span></div>
+      <div class="wbody" style="padding:6px">
+        <div style="font-size:10px;color:var(--muted);margin-bottom:6px">Available for freelance &amp; collaborations.
+        </div>
+        <div class="crow"><span class="xico">✉️</span>
+          <div>
+            <div class="ctitle">E-mail</div>
+            <div class="csub">hello@yourname.com</div>
+          </div>
+        </div>
+        <div class="crow"><span class="xico">📸</span>
+          <div>
+            <div class="ctitle">Instagram</div>
+            <div class="csub">@yourhandle</div>
+          </div>
+        </div>
+        <div class="crow"><span class="xico">🔗</span>
+          <div>
+            <div class="ctitle">LinkedIn</div>
+            <div class="csub">Your Name</div>
+          </div>
+        </div>
+        <div class="crow"><span class="xico">🐦</span>
+          <div>
+            <div class="ctitle">Twitter / X</div>
+            <div class="csub">@yourhandle</div>
+          </div>
+        </div>
+        <div class="hdiv"></div>
+        <div style="display:flex;justify-content:center;gap:6px">
+          <button class="btn" onclick="sd('mail')">Send Mail</button>
+          <button class="btn" onclick="cw('contact')">Close</button>
+        </div>
+      </div>
+      <div class="wstat">
+        <div class="wsp">4 contacts</div>
+      </div>
+    </div>
+
+  </div><!-- /desktop -->
+
+  <!-- START MENU -->
+  <div class="smenu" id="smenu">
+    <div class="smhead">
+      <div class="smhead-ico">🌿</div>
+      <div class="smhead-name">Your Name</div>
+    </div>
+    <div class="smdiv"></div>
+    <div class="smitem" onclick="ow('about');cs()"><span class="smico">🧑‍💻</span> About Me</div>
+    <div class="smitem" onclick="ow('projects');cs()"><span class="smico">📁</span> My Projects</div>
+    <div class="smitem" onclick="ow('drawing');cs()"><span class="smico">🖼️</span> Drawing</div>
+    <div class="smitem" onclick="ow('contact');cs()"><span class="smico">✉️</span> Contact</div>
+    <div class="smdiv"></div>
+    <div class="smitem" id="sm-theme" onclick="tt();cs()"><span class="smico">🌙</span> Dark Mode</div>
+    <div class="smdiv"></div>
+    <div class="smitem smshut" onclick="cs();sd('shutdown')"><span class="smico">🔴</span> Shut Down...</div>
+  </div>
+
+  <!-- TASKBAR -->
+  <div class="taskbar">
+    <button class="start-btn" id="sbtn" onclick="ts()">⊞ Start</button>
+    <div class="tbdiv"></div>
+    <div class="tbbtns" id="tbbtns"></div>
+    <div class="tbdiv"></div>
+    <div class="tbclock">
+      <span class="themetog" id="tico" onclick="tt()" title="Toggle dark mode">🌙</span>
+      <span id="clock">--:--</span>
+    </div>
+  </div>
+
+  <!-- PREVIEW CARDS -->
+  <div class="pcard" id="p-0">
+    <div class="pthumb">🏷️</div>
+    <div class="pbody">
+      <div class="ptitle">Brand Identity</div>
+      <div class="pdesc">Studio Mono — Minimal identity system built around negative space.</div>
+    </div>
+  </div>
+  <div class="pcard" id="p-1">
+    <div class="pthumb">📖</div>
+    <div class="pbody">
+      <div class="ptitle">Editorial Design</div>
+      <div class="pdesc">Vol.1 — 32-page self-published zine with custom typography.</div>
+    </div>
+  </div>
+  <div class="pcard" id="p-2">
+    <div class="pthumb">📱</div>
+    <div class="pbody">
+      <div class="ptitle">UI Design</div>
+      <div class="pdesc">App Interface — Calm productivity tool focused on clarity.</div>
+    </div>
+  </div>
+  <div class="pcard" id="p-3">
+    <div class="pthumb">🌸</div>
+    <div class="pbody">
+      <div class="ptitle">Poster Series</div>
+      <div class="pdesc">Seasons — Four abstract seasonal illustrations as a poster set.</div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lb" id="lb" onclick="clb()">
+    <div class="lbbox" onclick="event.stopPropagation()">
+      <div class="lbtb"><span class="lbtitle" id="lbt">Drawing Viewer</span>
+        <div class="lbclose" onclick="clb()">✕</div>
+      </div>
+      <div class="lbimg" id="lbi">🌸</div>
+      <div class="lbinfo">
+        <div class="lbname" id="lbn">Spring Study</div>
+        <div class="lbcap" id="lbc">A delicate exploration.</div>
+      </div>
+      <div class="lbnav"><button class="lbnavbtn" onclick="ln(-1)">◀ Prev</button><button class="lbnavbtn"
+          onclick="ln(1)">Next ▶</button></div>
+    </div>
+  </div>
+
+  <!-- DIALOG -->
+  <div class="dlov" id="dlov" onclick="hd()">
+    <div class="dl" onclick="event.stopPropagation()">
+      <div class="wtb" style="cursor:default">
+        <span class="wtb-ico" id="di">ℹ️</span>
+        <span class="wtb-txt" id="dt">Info</span>
+        <div class="wbtns">
+          <div class="wbtn" onclick="hd()">✕</div>
+        </div>
+      </div>
+      <div class="dlrow"><span class="dlico" id="db">✅</span>
+        <div class="dlmsg" id="dm">Message</div>
+      </div>
+      <div class="dlbtns" id="dbtns"><button class="btn" onclick="hd()">OK</button></div>
+    </div>
+  </div>
+
+  <script>
+    // CLOCK
+    (function tick() { const n = new Date(); document.getElementById('clock').textContent = String(n.getHours()).padStart(2, '0') + ':' + String(n.getMinutes()).padStart(2, '0'); setTimeout(tick, 1000) })();
+
+    // THEME
+    let dark = false;
+    function tt() {
+      dark = !dark;
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+      const ico = dark ? '☀️' : '🌙';
+      document.getElementById('tico').textContent = ico;
+      document.getElementById('sm-theme').innerHTML = `<span class="smico">${ico}</span> ${dark ? 'Light Mode' : 'Dark Mode'}`;
+    }
+
+    // START MENU
+    function ts() { document.getElementById('smenu').classList.toggle('show') }
+    function cs() { document.getElementById('smenu').classList.remove('show') }
+    document.addEventListener('click', e => { if (!e.target.closest('#smenu') && !e.target.closest('#sbtn')) cs() });
+
+    // WINDOWS
+    const WS = ['about', 'projects', 'drawing', 'contact'];
+    let z = 10; const OS = new Set();
+    const ICO = { about: '🧑‍💻', projects: '📁', drawing: '🖼️', contact: '✉️' };
+    const LBL = { about: 'About Me', projects: 'My Projects', drawing: 'Drawing', contact: 'Contact' };
+    const gw = id => document.getElementById('w-' + id);
+    const gt = id => document.getElementById('t-' + id);
+
+    function ow(id) {
+      const w = gw(id);
+      if (w.classList.contains('open')) { fw(id); return }
+      w.classList.add('open'); OS.add(id); fw(id); utb();
+      if (id === 'drawing') spg();
+      if (id === 'about') sty();
+    }
+    function cw(id) { gw(id).classList.remove('open'); OS.delete(id); utb() }
+    function fw(id) {
+      WS.forEach(i => { const t = gt(i); if (t) t.classList.toggle('off', i !== id); gw(i).style.boxShadow = '1px 1px 0 var(--bdd)' });
+      gw(id).style.zIndex = ++z; gw(id).style.boxShadow = '4px 4px 16px rgba(0,0,0,.45)';
+    }
+    function utb() {
+      const c = document.getElementById('tbbtns'); c.innerHTML = '';
+      OS.forEach(id => { const b = document.createElement('div'); b.className = 'tbbtn on'; b.textContent = ICO[id] + ' ' + LBL[id]; b.onclick = () => fw(id); c.appendChild(b) });
+    }
+
+    // DRAG
+    WS.forEach(id => {
+      const w = gw(id), tb = gt(id); let drag = false, sx, sy, sl, st;
+      tb.addEventListener('mousedown', e => {
+        if (window.innerWidth <= 640 || e.target.classList.contains('wbtn')) return;
+        drag = true; sx = e.clientX; sy = e.clientY; sl = parseInt(w.style.left) || w.offsetLeft; st = parseInt(w.style.top) || w.offsetTop; fw(id); e.preventDefault();
+      });
+      document.addEventListener('mousemove', e => { if (!drag) return; w.style.left = Math.max(0, sl + e.clientX - sx) + 'px'; w.style.top = Math.max(0, st + e.clientY - sy) + 'px' });
+      document.addEventListener('mouseup', () => drag = false);
+      w.addEventListener('mousedown', () => fw(id));
+    });
+
+    // PROGRESS
+    function spg() {
+      let p = 0; const bar = document.getElementById('pbar'), txt = document.getElementById('pct');
+      if (parseInt(txt.textContent) >= 100) return;
+      const t = setInterval(() => { p += Math.floor(Math.random() * 15) + 4; if (p >= 100) { p = 100; clearInterval(t) } bar.style.width = p + '%'; txt.textContent = p }, 180);
+    }
+
+    // TYPING
+    const TS = "I create visual experiences with a focus on space, hierarchy, and quiet elegance. Drawing and design are my way of understanding the world.";
+    let ti = 0, tt2 = null, td = false;
+    function sty() {
+      if (td) return;
+      const el = document.getElementById('ttext'), cur = document.getElementById('tcur');
+      el.textContent = ''; ti = 0; clearInterval(tt2);
+      tt2 = setInterval(() => { el.textContent += TS[ti]; ti++; if (ti >= TS.length) { clearInterval(tt2); td = true; setTimeout(() => cur.style.display = 'none', 1200) } }, 30);
+    }
+
+    // HOVER PREVIEW
+    function sp(e, i) {
+      const c = document.getElementById('p-' + i), r = e.currentTarget.getBoundingClientRect();
+      c.style.top = (r.top - 8) + 'px'; c.style.left = (r.right + 10) + 'px';
+      c.style.opacity = '1'; c.style.transform = 'translateY(0)';
+      setTimeout(() => { const cr = c.getBoundingClientRect(); if (cr.right > window.innerWidth - 8) c.style.left = (r.left - cr.width - 10) + 'px'; if (cr.bottom > window.innerHeight - 36) c.style.top = (window.innerHeight - 36 - cr.height) + 'px' }, 0);
+    }
+    function hp(i) { const c = document.getElementById('p-' + i); c.style.opacity = '0'; c.style.transform = 'translateY(8px)' }
+
+    // LIGHTBOX
+    const GL = [
+      { i: '🌸', n: 'Spring Study', c: 'A delicate exploration of spring colors and gentle, flowing forms.' },
+      { i: '🏔️', n: 'Mountain', c: 'Stillness and scale — the language of mountains translated into line.' },
+      { i: '🌿', n: 'Botanica', c: 'Botanical studies in ink. Observing the architecture of leaves.' },
+      { i: '🌊', n: 'Ocean', c: 'Movement made still. Capturing the rhythm of waves in a single frame.' },
+      { i: '🦋', n: 'Flutter', c: 'The geometry of wings — fragile structures holding perfect symmetry.' },
+      { i: '🌙', n: 'Nocturne', c: 'A night study. Dark palette, soft light. The quiet of late hours.' },
+    ];
+    let li = 0;
+    function olb(i) { li = i; rlb(); document.getElementById('lb').classList.add('show') }
+    function clb() { document.getElementById('lb').classList.remove('show') }
+    function ln(d) { li = (li + d + GL.length) % GL.length; rlb() }
+    function rlb() { const g = GL[li]; document.getElementById('lbi').textContent = g.i; document.getElementById('lbn').textContent = g.n; document.getElementById('lbc').textContent = g.c; document.getElementById('lbt').textContent = 'Drawing Viewer — ' + g.n }
+    document.addEventListener('keydown', e => { if (!document.getElementById('lb').classList.contains('show')) return; if (e.key === 'ArrowRight') ln(1); if (e.key === 'ArrowLeft') ln(-1); if (e.key === 'Escape') clb() });
+
+    // DIALOG
+    const DL = {
+      mail: { i: '✅', t: 'Message Sent!', m: 'Your message has been sent successfully.\n\nA reply will follow within 1–2 business days.', b: '<button class="btn" onclick="hd()">OK</button>' },
+      recycle: { i: '🗑️', t: 'Recycle Bin', m: 'The Recycle Bin is empty.\n\nNothing to see here!', b: '<button class="btn" onclick="hd()">OK</button>' },
+      shutdown: { i: '⚠️', t: 'Shut Down', m: 'Are you sure you want to close all windows\nand shut down the portfolio?', b: '<button class="btn" onclick="doshut()">Yes</button><button class="btn" onclick="hd()">No</button><button class="btn" onclick="hd()">Cancel</button>' },
+      bye: { i: '👋', t: 'Goodbye!', m: 'All windows closed.\n\nThank you for visiting. See you next time!', b: '<button class="btn" onclick="hd()">OK</button>' },
+    };
+    function sd(type) {
+      const d = DL[type] || DL.mail;
+      document.getElementById('di').textContent = d.i; document.getElementById('db').textContent = d.i;
+      document.getElementById('dt').textContent = d.t; document.getElementById('dm').textContent = d.m;
+      document.getElementById('dbtns').innerHTML = d.b;
+      document.getElementById('dlov').classList.add('show');
+    }
+    function hd() { document.getElementById('dlov').classList.remove('show') }
+    function doshut() { hd(); WS.forEach(cw); setTimeout(() => sd('bye'), 200) }
+
+    // INIT
+    setTimeout(() => ow('about'), 150);
+    // setTimeout(() => ow('projects'), 30000);
+  </script>
+</body>
+
+</html>
